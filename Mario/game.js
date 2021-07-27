@@ -3,7 +3,6 @@ kaboom({
     fullscreen: true,
     scale: 1,
     debug: true,
-    clearColor: [0, 0, 0, 1],
 })
 
 loadSprite('esquinaIzq', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_04.png')
@@ -13,7 +12,7 @@ loadSprite('colinaArriba1', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_09.png
 loadSprite('colinaArriba2', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_18.png')
 loadSprite('colinaAbajo1', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_10.png')
 loadSprite('colinaAbajo2', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_19.png')
-loadSprite("fondoVerde", "Mario/images/PNG/Tiles/Green tiles/tileGreen_03.png")
+loadSprite("fondoVerde", "https://i.imgur.com/N8xK3bu.png")
 loadSprite('esquinaFlotanteizq', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_26.png')
 loadSprite('esquinaFlotanteCen', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_27.png')
 loadSprite('esquinaFlotanteDer', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_01.png')
@@ -37,17 +36,21 @@ scene("game", () => {
     layers(['bg', 'obj', 'ui'], 'obj')
 
     const map = [
-        '====================================='   
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "                                  ",
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "                                  ",
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",  
     ]
 
     const levelCfg = {
         width: 40,
         height: 40,
-        '=': [sprite('fondoVerde', solid())]
+        'a': [sprite('fondoVerde'), solid(), "block"]
 
     }
 
     const gameLevel = addLevel(map, levelCfg)
 })
 
-start("game")
+go("game")
