@@ -5,10 +5,10 @@ kaboom({
     debug: true,
 })
 
-loadSprite('esquinaIzq', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_04.png')
-loadSprite('esquinaCen', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_05.png')
-loadSprite('esquinaDer', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_06.png')
-loadSprite('colinaArriba1', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_09.png')
+loadSprite("esquinaIzq", "https://i.imgur.com/Z7kkjOr.png")
+loadSprite("esquinaCen", "https://i.imgur.com/Dl0cWP3.png")
+loadSprite('esquinaDer', 'https://i.imgur.com/PPyyllk.png')
+loadSprite('colinaArriba1', 'https://i.imgur.com/aIdX8PZ.png')
 loadSprite('colinaArriba2', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_18.png')
 loadSprite('colinaAbajo1', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_10.png')
 loadSprite('colinaAbajo2', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_19.png')
@@ -19,7 +19,7 @@ loadSprite('esquinaFlotanteDer', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_0
 loadSprite('aguaArriba', 'Mario/images/PNG/Other/fluidBlue_top.png')
 loadSprite('agua', 'Mario/images/PNG/Other/fluidBlue.png')
 loadSprite('personaje', 'Mario/images/PNG/Players/Player Blue/playerBlue_walk1.png')
-loadSprite('plantaDecorativa1', 'Mario/images/PNG/Other/plantTop_yellow.png')
+loadSprite('plantaDecorativa1', 'https://i.imgur.com/NeulNde.png')
 loadSprite('plantaDecorativa2', 'Mario/images/PNG/Other/plantDark_4.png')
 loadSprite('plantaDecorativa3', 'Mario/images/PNG/Other/plantRed_6.png')
 loadSprite('enemigoFlotante', 'Mario/images/PNG/Enemies/enemyFloating_1.png')
@@ -36,18 +36,30 @@ scene("game", () => {
     layers(['bg', 'obj', 'ui'], 'obj')
 
     const map = [
+        "hrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrg",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a   f          f    f            a",
         "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "                                  ",
-        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "                                  ",
-        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",  
+               
     ]
 
     const levelCfg = {
         width: 40,
         height: 40,
-        'a': [sprite('fondoVerde'), solid(), "block"]
-
+        'a': [sprite('fondoVerde'), solid(), "block"],
+        'r': [sprite('esquinaCen'), solid(), "block"],
+        'z': [sprite('esquinaIzq'), solid(), "block"],
+        'g': [sprite('esquinaDer'), solid(), "block"],
+        'f': [sprite('plantaDecorativa1'), solid(), "block"],
+        'h': [sprite('colinaArriba1'), solid(), "block"],
     }
 
     const gameLevel = addLevel(map, levelCfg)
