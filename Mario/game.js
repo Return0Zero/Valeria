@@ -16,15 +16,15 @@ loadSprite("fondoVerde", "https://i.imgur.com/N8xK3bu.png")
 loadSprite('esquinaFlotanteizq', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_26.png')
 loadSprite('esquinaFlotanteCen', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_27.png')
 loadSprite('esquinaFlotanteDer', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_01.png')
-loadSprite('aguaArriba', 'Mario/images/PNG/Other/fluidBlue_top.png')
+loadSprite('redkey', 'https://i.imgur.com/zRnLjdq.png')
 loadSprite('agua', 'Mario/images/PNG/Other/fluidBlue.png')
 loadSprite('personaje', 'Mario/images/PNG/Players/Player Blue/playerBlue_walk1.png')
 loadSprite('plantaDecorativa1', 'https://i.imgur.com/NeulNde.png')
 loadSprite('plantaDecorativa2', 'Mario/images/PNG/Other/plantDark_4.png')
 loadSprite('plantaDecorativa3', 'Mario/images/PNG/Other/plantRed_6.png')
-loadSprite('enemigoFlotante', 'Mario/images/PNG/Enemies/enemyFloating_1.png')
-loadSprite('enemigoBajo', 'Mario/images/PNG/Enemies/enemySpikey_1.png')
-loadSprite('enemigoCaminando', 'Mario/images/PNG/Enemies/enemyWalking_1.png')
+loadSprite('pinchos', 'https://i.imgur.com/jXT2opE.png')
+loadSprite('enemigoCaminando', 'Mario/images/PNGPNG/Enemies/enemyFloating_1.png')
+loadSprite('enemigoBajo', 'Mario/images/PNG/Enemies/enemyS/Enemies/enemyWalking_1.png')
 loadSprite('banderaFinal1', 'Mario/images/PNG/Other/flagRed_down.png')
 loadSprite('banderaFinal2', 'Mario/images/PNG/Other/flagGreen_up.png')
 
@@ -37,16 +37,17 @@ scene("game", () => {
 
     const map = [
         "hrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrg",
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "a                                a",
         "a                                a",
         "a                                a",
         "a                                a",
-        "a                                a",
-        "a                                a",
-        "a                                a",
-        "a                                a",
-        "a                                a",
-        "a   f          f    f            a",
+        "a         l                      a",
+        "a           zrg                  a",
+        "a         f aaa                  a",
+        "a      zrrrg aa                  a",
+        "a      aaaaaaaa                  a",
+        "zrrrrrgaaaaaaaazrrrrrrrrrrrrrrrrrg",
         "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                
     ]
@@ -60,6 +61,8 @@ scene("game", () => {
         'g': [sprite('esquinaDer'), solid(), "block"],
         'f': [sprite('plantaDecorativa1'), solid(), "block"],
         'h': [sprite('colinaArriba1'), solid(), "block"],
+        'l': [sprite('redkey'), solid(), "block"],
+        'v': [sprite('pinchos'), solid(), "block"],
     }
 
     const gameLevel = addLevel(map, levelCfg)
