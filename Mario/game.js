@@ -15,18 +15,18 @@ loadSprite('colinaAbajo2', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_19.png'
 loadSprite("fondoVerde", "https://i.imgur.com/N8xK3bu.png")
 loadSprite('esquinaFlotanteizq', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_26.png')
 loadSprite('esquinaFlotanteCen', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_27.png')
-loadSprite('esquinaFlotanteDer', 'Mario/images/PNG/Tiles/Green tiles/tileGreen_01.png')
+loadSprite('esquinaFlotanteDer', 'https://i.imgur.com/DpoXkw6.png')
 loadSprite('redkey', 'https://i.imgur.com/zRnLjdq.png')
-loadSprite('agua', 'Mario/images/PNG/Other/fluidBlue.png')
-loadSprite('personaje', 'Mario/images/PNG/Players/Player Blue/playerBlue_walk1.png')
+loadSprite('agua', 'https://i.imgur.com/zYu4FfX.png')
+loadSprite('personaje', 'https://i.imgur.com/IbQixqQ.png')
 loadSprite('plantaDecorativa1', 'https://i.imgur.com/NeulNde.png')
-loadSprite('plantaDecorativa2', 'Mario/images/PNG/Other/plantDark_4.png')
-loadSprite('plantaDecorativa3', 'Mario/images/PNG/Other/plantRed_6.png')
+loadSprite('plantaDecorativa2', 'https://i.imgur.com/gSmaTXY.png')
+loadSprite('plantaDecorativa3', 'https://i.imgur.com/Gtyk9hA.png')
 loadSprite('pinchos', 'https://i.imgur.com/jXT2opE.png')
-loadSprite('enemigoCaminando', 'Mario/images/PNGPNG/Enemies/enemyFloating_1.png')
-loadSprite('enemigoBajo', 'Mario/images/PNG/Enemies/enemyS/Enemies/enemyWalking_1.png')
-loadSprite('banderaFinal1', 'Mario/images/PNG/Other/flagRed_down.png')
-loadSprite('banderaFinal2', 'Mario/images/PNG/Other/flagGreen_up.png')
+loadSprite('enemigoCaminando', 'https://i.imgur.com/FOuy16a.png')
+loadSprite('jewel', 'https://i.imgur.com/Xp3KmJe.png')
+loadSprite('banderaFinal1', 'https://i.imgur.com/ItN3oNi.png')
+loadSprite('arrow', 'https://i.imgur.com/Cp2voxR.png')
 
 
 
@@ -42,12 +42,12 @@ scene("game", () => {
         "a                                a",
         "a                                a",
         "a                                a",
-        "a         l                      a",
+        "a         l  w 0                 a",
         "a           zrg                  a",
         "a         f aaa                  a",
-        "a      zrrrg aa                  a",
-        "a      aaaaaaaa                  a",
-        "zrrrrrgaaaaaaaazrrrrrrrrrrrrrrrrrg",
+        "a    q zrrrxaaa                e a",
+        "a b    aaaaaaaa    2 k  w   0    a",
+        "zrrrrrgaaaaaaa999rrrrrrrrrrrrrrrrg",
         "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                
     ]
@@ -63,6 +63,16 @@ scene("game", () => {
         'h': [sprite('colinaArriba1'), solid(), "block"],
         'l': [sprite('redkey'), solid(), "block"],
         'v': [sprite('pinchos'), solid(), "block"],
+        'b': [sprite('personaje'), solid(), "block"],
+        'e': [sprite('banderaFinal1'), solid(), "block"],
+        'w': [sprite('enemigoCaminando'), solid(), "block"],
+        '9': [sprite('agua'), solid(), "block"],
+        'q': [sprite('arrow'), solid(), "block"],
+        '2': [sprite('plantaDecorativa2'), solid(), "block"],
+        '0': [sprite('jewel'), solid(), "block"],
+        'k': [sprite('plantaDecorativa3'), solid(), "block"],
+        'x': [sprite('esquinaFlotanteDer'), solid(), "block"],
+    
     }
 
     const gameLevel = addLevel(map, levelCfg)
