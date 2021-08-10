@@ -1,7 +1,7 @@
 kaboom({
     global: true,
     fullscreen: true,
-    scale: 0.5,
+    scale: 0.7,
     debug: true,
 })
 
@@ -65,15 +65,27 @@ scene("game", ({ level, score}) => {
         "a                                a",
         "a       zrg  wq                  a",
         "a           zrg                  a",
+        "a        2              2        a",
+        "a      zrrrrrrx        zrg       a",
+        "a  0                 k  w      e a",
+        "azrrrrgaaaaaaaa88888rrrrrrrrrrrrrg",
+        "aaaaaaaaaaaaaaa99999aaaaaaaaaaaaaa",
+        ],
+        [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a                                a",
+        "a       zrg  wq                  a",
+        "a           zrg                  a",
         "a         f             2        a",
         "a      zrrrrrrx        zrg       a",
         "a  0                 k  w      e a",
         "azrrrrgaaaaaaaa88888rrrrrrrrrrrrrg",
         "aaaaaaaaaaaaaaa99999aaaaaaaaaaaaaa",
         ],
-        
-               
-    ]
+        ]
 
     const levelCfg = {
         width: 64,
